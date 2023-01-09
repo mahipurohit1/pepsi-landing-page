@@ -1,0 +1,143 @@
+/* Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+#02080a
+#115566
+#b8ccd1
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1e1e1e;
+  color: rgb(255, 255, 255);
+}
+.header {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem 3.2rem;
+}
+.logo-img {
+  height: 5rem;
+}
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-weight: 500;
+  font-size: 2rem;
+  list-style: none;
+}
+.head-link:link,
+.head-link:visited {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.head-link:active,
+.head-link:hover {
+  border-bottom: 1px solid #fff;
+}
+.sec-hero {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4.8rem 0;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  padding: 0 3.2rem;
+  position: relative;
+}
+.primary-heading {
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 1.4em;
+  letter-spacing: -0.75px;
+  text-transform: uppercase;
+}
+.primary-heading span {
+  display: block;
+  font-size: 8.6rem;
+  font-weight: 900;
+}
+.heading-text {
+  margin: 3.2rem 0 4.8rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.75px;
+}
+.btn:link,
+.btn:visited {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1e1e1e;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  border-radius: 1rem;
+  transition: all 0.4s;
+}
+.btn:hover,
+.btn:active {
+  color: #fff;
+  background-color: #1e1e1e;
+  outline: 1px solid #fff;
+}
+.img-box {
+  justify-self: center;
+}
+.pepsi-img {
+  width: 88%;
+}
+.social-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+.social-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  list-style: none;
+}
+.social-icon-img {
+  background-color: #fff;
+}
+
+.pepsi-option {
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.pepsi-option-img {
+  height: 7.5rem;
+  transition: all 0.3s;
+}
+.pepsi-option-img:hover {
+  transform: translateY(-10%);
+
+  cursor: pointer;
+}
