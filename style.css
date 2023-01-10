@@ -176,11 +176,11 @@ body {
     visibility: visible;
     transform: translateX(0%);
   }
-  .header.open .open-menu {
-    display: none;
-  }
   .header.open .close-menu {
     display: block;
+  }
+  .header.open .open-menu {
+    display: none;
   }
 }
 @media (max-width: 30em) {
