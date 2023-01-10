@@ -16,11 +16,13 @@ Spacing system (px)
 }
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
   font-family: "Roboto", sans-serif;
   background-color: #1e1e1e;
   color: rgb(255, 255, 255);
+  overflow-x: hidden;
 }
 .header {
   max-width: 120rem;
@@ -28,6 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 2.4rem 3.2rem;
+  position: relative;
 }
 .logo-img {
   height: 5rem;
@@ -105,23 +108,6 @@ body {
 .pepsi-img {
   width: 88%;
 }
-.social-icon {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%);
-}
-.social-ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2.4rem;
-  list-style: none;
-}
-.social-icon-img {
-  background-color: #fff;
-}
 
 .pepsi-option {
   position: absolute;
@@ -138,6 +124,70 @@ body {
 }
 .pepsi-option-img:hover {
   transform: translateY(-10%);
-
   cursor: pointer;
+}
+.open-menu,
+.close-menu {
+  height: 3.2rem;
+  width: 3.2rem;
+  z-index: 9999;
+  display: none;
+}
+@media (max-width: 60em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .text-box {
+    text-align: center;
+  }
+  .heading-text {
+    padding: 0 6.4rem;
+  }
+  .pepsi-option {
+    top: 110%;
+    gap: 4.8rem;
+  }
+  .header {
+    padding: 3.2rem 4.8rem;
+  }
+  .open-menu {
+    display: block;
+  }
+  .nav-ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(239, 33, 33, 0.998);
+    font-size: 4.8rem;
+    flex-direction: column;
+    z-index: 999;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .header.open .nav-ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+  .header.open .open-menu {
+    display: none;
+  }
+  .header.open .close-menu {
+    display: block;
+  }
+}
+@media (max-width: 30em) {
+  .pepsi-option {
+    top: 105%;
+    left: 25%;
+    gap: 3.2rem;
+    padding-bottom: 1.5rem;
+  }
 }
